@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(144, 189, 172);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    padding: 0.8% 0;
+    font-size: 2rem;
+    font-family: "helvetica neue";
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: "helvetica neue";
+}
+
+.heading {
+    background-color: rgb(64, 111, 106);
+    color: white;
+    text-align: center;
+    margin: 5% auto 0 auto;
+    max-width: 420px;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.choice {
+    margin-top: 3%;
+    display: flex;
+}
+
+.secofchoice {
+    margin: 0 2%;
+}
+
+.box {
+    background: white;
+    border-radius: 10px;
+    max-width: 420px;
+    margin: 3% auto 5% auto;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(205, 204, 204);
+    margin-left: 2%;
+}
+
+input[type="checkbox"] {
+    margin: 3%;
+}
+
+input[type="text"] {
+    text-align: center;
+    border: none;
+    width: 380px;
+    font-size: 1.2rem;
+    padding: 4% 0;
+    font-family: "helvetica neue";
+    outline: none;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(144, 189, 172);
+}
+
+.completed {
+    text-decoration: line-through;
+    text-decoration-color: rgb(64, 111, 106);
+}
+
+.footer {
+    font-size: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+button {
+    min-height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgb(144, 189, 172);
+    color: #fff;
+    font-size: 30px;
+    border-width: 0;
+    margin-right: 3%;
+}

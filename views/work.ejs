@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDobyMe</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="list">
+                <%- include("partials/header.ejs") %>
+                    <div class="header">
+                        <div class="heading">
+                            <h1>
+                                Work List
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <% workTasks.forEach((task, index) => { %>
+                            <div class="item">
+                                <input type="checkbox" <% if (task.completed) { %> checked
+                                <% } %>
+                                    onclick="toggleTaskCompleted(
+                                    <%= index %>)" />
+                                        <p <% if (task.completed) { %>class="completed"
+                                            <% } %>>
+                                                <%= task %>
+                                        </p>
+                            </div>
+                            <% }) %>
+                                <form class="item" action="/submit" method="post">
+                                    <input type="text" name="newTask" placeholder="New Task" autocomplete="off">
+                                    <input type="hidden" name="section" value="work">
+                                    <button type="submit" name="list">+</button>
+                                </form>
+                    </div>
+                    <%- include("partials/footer.ejs") %>
+            </div>
+        </div>
+        <script src="/script.js"></script>
+    </main>
+
+</body>
+
+</html>
